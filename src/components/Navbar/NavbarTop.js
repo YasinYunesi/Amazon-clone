@@ -11,7 +11,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 function Navbar() {
   return (
-    <div className='bg-amazon_blue px-2 pt-3 pb-2 md:py-1.5 md:flex md:items-center'>
+    <div className='bg-amazon_blue-dark px-2 pt-3 pb-2 md:py-1.5 md:flex md:items-center'>
       {/* left side */}
       <div className='flex items-center flex-grow'>
         {/* Logo */}

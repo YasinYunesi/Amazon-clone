@@ -24,7 +24,7 @@ function Sidebar() {
       {/* the main list (everything except close btn) */}
       <div className='h-full w-11/12 bg-white overflow-y-auto pb-10'>
         {/* sign in */}
-        <Link to='/' className='flex items-center text-xl font-bold text-white bg-amazon_blue-light py-2 pl-10'>
+        <Link to='/' className='flex items-center text-xl font-bold text-white bg-amazon_blue py-2 pl-10'>
           <AccountCircleIcon style={{ fontSize: "2rem" }} />
           <h1 className='ml-3'>Hello, Sign in</h1>
         </Link>
@@ -101,7 +101,7 @@ function Sidebar() {
                 <ShoppingCartOutlinedIcon className='mr-1' style={{ fontSize: "1.3rem" }} />
                 Cart
               </div>
-              <span className='rounded-full font-bold flex items-center justify-center h-5 w-5 text-sm text-amazon_blue-light bg-gray-400'>
+              <span className='rounded-full font-bold flex items-center justify-center h-5 w-5 text-sm text-amazon_blue bg-gray-400'>
                 0
               </span>
             </Link>

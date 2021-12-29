@@ -4,6 +4,7 @@ import Banner from "../components/Banner/Banner";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Products from "../components/Products/Products";
+import Footer from "./../components/Footer/Footer";
 
 function HomeScreen() {
   // LOGIC /////////////////////////////////////
@@ -23,14 +24,16 @@ function HomeScreen() {
 
         <Navbar />
 
+        {/* Main content */}
         <div className='max-w-screen-2xl mx-auto'>
           <Banner />
 
           <Products />
         </div>
+
+        <Footer />
       </div>
 
-      {/* Sidebar */}
       <Sidebar />
     </>
   );
