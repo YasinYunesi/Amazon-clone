@@ -1,6 +1,9 @@
+import CopyrightIcon from "@mui/icons-material/Copyright";
+import { Link } from "react-router-dom";
+
 function FooterBottom() {
   return (
-    <div className='bg-amazon_blue-dark pt-20 pb-16'>
+    <div className='bg-amazon_blue-dark pt-20 pb-3'>
       <ul className='text-gray-300 max-w-screen-lg mx-auto text-xs px-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7'>
         <li className='footer_sm_items'>
           <p>Amazon Music</p>
@@ -137,6 +140,19 @@ function FooterBottom() {
         <li className='footer_sm_items'>
           <p>PillPack</p>
           Pharmacy Simplified
+        </li>
+      </ul>
+
+      {/* the privacy policy part */}
+      <ul className='flex items-center justify-between w-1/4 text-xs mx-auto mt-10'>
+        <li>Conditions of Use</li>
+        <li>Privacy Notice</li>
+        <li>Interest-Based Ads</li>
+        <li className='flex items-center'>
+          <CopyrightIcon style={{ fontSize: "1.2rem" }} />
+          <a href='https://findyasinyunesi.vercel.app/' target='_blank' rel='noreferrer'>
+            2021 Yasin Yunesi
+          </a>
         </li>
       </ul>
     </div>
