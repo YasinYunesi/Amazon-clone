@@ -33,6 +33,9 @@
   .footer_sm_items {
     @apply first-line:font-bold first-line:text-white mr-5 mb-5 cursor-pointer hover:underline opacity-90;
   }
+  .loading {
+    @apply w-full h-full flex items-center justify-center after:absolute after:border-40 after:border-transparent after:border-b-white before:absolute before:border-40 before:border-transparent before:border-b-white before:animate-rotateA after:rotate-90 after:animate-rotateB;
+  }
 }
 /* costume classes for tailwind end */
 
