@@ -7,12 +7,16 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { selectItems } from "../../features/basket";
 
 function Sidebar() {
   // LOGIC //////////////////////////////
   const sidebarAnimation = useSelector((state) => state.sidebar.value.animation);
   const sidebarAnimation_n = useSelector((state) => state.sidebar.value.animation_n);
+
+  // Accessing redux
   const dispatch = useDispatch();
+  const basketItmes = useSelector(selectItems);
 
   const { loginWithRedirect, logout, user } = useAuth0();
 
@@ -117,8 +121,8 @@ function Sidebar() {
                 <ShoppingCartOutlinedIcon className='mr-1' style={{ fontSize: "1.3rem" }} />
                 Cart
               </div>
-              <span className='rounded-full font-bold flex items-center justify-center h-5 w-5 text-sm text-amazon_blue bg-gray-400'>
-                0
+              <span className='rounded-full font-bold flex items-center justify-center h-5 w-5 text-xs text-amazon_blue bg-gray-400'>
+                {basketItmes.length}
               </span>
             </Link>
           </li>

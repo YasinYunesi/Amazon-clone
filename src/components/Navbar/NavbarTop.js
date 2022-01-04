@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
@@ -8,10 +9,14 @@ import RouterIcon from "@mui/icons-material/Router";
 import WomanIcon from "@mui/icons-material/Woman";
 import ManIcon from "@mui/icons-material/Man";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { selectItems } from "../../features/basket";
 
 function Navbar() {
   // LOGIC //////////////////////////
   const { loginWithRedirect, logout, user } = useAuth0();
+
+  // Accessing redux
+  const basketItmes = useSelector(selectItems);
 
   // JSX //////////////////////////
   return (
@@ -33,7 +38,7 @@ function Navbar() {
         </div>
 
         {/* search form */}
-        <form className='md:mr-5 bg-white rounded flex items-center flex-grow'>
+        <form className='ml-5 md:mr-5 lg:ml-0 bg-white rounded flex items-center flex-grow'>
           {/* dropdown start */}
           <div className='inline-block relative group'>
             <button
@@ -96,8 +101,8 @@ function Navbar() {
         {/* Shopping cart */}
         <Link to='/cart' className='py-2 mr-3 flex items-end font-bold p-2'>
           <div className='relative'>
-            <span className='absolute -right-1 rounded-full flex items-center justify-center font-bold h-4 w-4 text-sm text-black bg-amazon_yellow-dark'>
-              0
+            <span className='absolute -right-1 rounded-full flex items-center justify-center font-bold h-4 w-4 text-xs text-black bg-amazon_yellow-dark'>
+              {basketItmes.length}
             </span>
             <ShoppingCartOutlinedIcon style={{ fontSize: "2.3rem" }} />
           </div>

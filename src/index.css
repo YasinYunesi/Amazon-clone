@@ -39,6 +39,9 @@
   .loading {
     @apply w-full h-full flex items-center justify-center after:absolute after:border-40 after:border-transparent after:border-b-white before:absolute before:border-40 before:border-transparent before:border-b-white before:animate-rotateA after:rotate-90 after:animate-rotateB;
   }
+  .basket_btn {
+    @apply py-1 rounded bg-gradient-to-b transition-all duration-300 from-amber-100 to-amber-400 border border-amber-300 hover:opacity-80 w-full my-3 text-sm lg:text-base;
+  }
 }
 /* costume classes for tailwind end */
 

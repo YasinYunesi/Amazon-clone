@@ -144,7 +144,7 @@ function FooterBottom() {
       </ul>
 
       {/* the privacy policy part */}
-      <ul className='flex items-center justify-between w-1/4 text-xs mx-auto mt-10'>
+      <ul className='flex items-center justify-between w-11/12 md:w-8/12 lg:w-6/12 2xl:w-2/6 text-xs mx-auto mt-10'>
         <li>Conditions of Use</li>
         <li>Privacy Notice</li>
         <li>Interest-Based Ads</li>

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
-import CategoryScreen from "./screens/CategoryScreen";
+import CartScreen from "./screens/CartScreen";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
             <HomeScreen />
           </Route>
           {/* category screen */}
-          <Route path='/category/:category' exact>
-            <CategoryScreen />
+          <Route path='/cart' exact>
+            <CartScreen />
           </Route>
         </Switch>
       </Router>

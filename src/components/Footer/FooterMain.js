@@ -77,7 +77,11 @@ function FooterMain() {
             <span className='font-bold mr-2'>$</span> USD - U.S Dollar
           </li>
           <li className='footer_info'>
-            <ImageAspectRatioIcon className='mr-2' style={{ fontSize: "1.2rem" }} />
+            <img
+              className='w-5 h-3.5 mr-2'
+              src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png'
+              alt='Flag'
+            />
             United States
           </li>
         </ul>
