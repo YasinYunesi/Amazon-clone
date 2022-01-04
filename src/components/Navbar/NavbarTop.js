@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -6,10 +7,13 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import RouterIcon from "@mui/icons-material/Router";
 import WomanIcon from "@mui/icons-material/Woman";
 import ManIcon from "@mui/icons-material/Man";
-import ImageAspectRatioIcon from "@mui/icons-material/ImageAspectRatio";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 function Navbar() {
+  // LOGIC //////////////////////////
+  const { loginWithRedirect, logout, user } = useAuth0();
+
+  // JSX //////////////////////////
   return (
     <div className='bg-amazon_blue-dark px-2 pt-3 pb-2 md:py-1.5 md:flex md:items-center'>
       {/* left side */}
@@ -82,9 +86,9 @@ function Navbar() {
           />
         </div>
         {/* Sign in */}
-        <Link to='/' className='flex flex-col text-sm leading-4 mr-3 p-2'>
-          Hello, Yasin <span className='font-bold'>Sign out</span>
-        </Link>
+        <button className='flex flex-col text-sm leading-4 mr-3 p-2' onClick={!user ? () => loginWithRedirect() : () => logout()}>
+          Hello, {user ? user.name : "User"} <span className='font-bold'>Sign {user ? "out" : "in"}</span>
+        </button>
         {/* Orders */}
         <Link to='/' className='flex flex-col text-sm leading-4 mr-3 p-2'>
           Returns <span className='font-bold'>& Orders</span>

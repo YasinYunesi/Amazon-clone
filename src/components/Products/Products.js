@@ -30,7 +30,7 @@ function Products() {
 
   // JSX ///////////////////////////////
   return (
-    <div className={!loading && "grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto md:-mt-52"}>
+    <div className={!loading ? "grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto md:-mt-52" : ""}>
       {!loading ? (
         products.map(({ id, title, price, category, description, image, rating }, i) => {
           return (

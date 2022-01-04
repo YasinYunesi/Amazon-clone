@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import { disable } from "../../features/sidebar";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ImageAspectRatioIcon from "@mui/icons-material/ImageAspectRatio";
 import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
@@ -13,6 +13,8 @@ function Sidebar() {
   const sidebarAnimation = useSelector((state) => state.sidebar.value.animation);
   const sidebarAnimation_n = useSelector((state) => state.sidebar.value.animation_n);
   const dispatch = useDispatch();
+
+  const { loginWithRedirect, logout, user } = useAuth0();
 
   // JSX //////////////////////////////
   return (
@@ -24,10 +26,19 @@ function Sidebar() {
       {/* the main list (everything except close btn) */}
       <div className='h-full w-11/12 bg-white overflow-y-auto pb-10'>
         {/* sign in */}
-        <Link to='/' className='flex items-center text-xl font-bold text-white bg-amazon_blue py-2 pl-10'>
-          <AccountCircleIcon style={{ fontSize: "2rem" }} />
-          <h1 className='ml-3'>Hello, Sign in</h1>
-        </Link>
+        <button
+          className={`w-full flex items-center text-xl font-bold text-white bg-amazon_blue py-2 pl-10 ${
+            user ? "cursor-default" : "cursor-pointer"
+          }`}
+          onClick={!user ? () => loginWithRedirect() : undefined}
+        >
+          {user ? (
+            <img className='rounded-full w-2/12' src={user.picture} alt='user' />
+          ) : (
+            <AccountCircleIcon style={{ fontSize: "2rem" }} />
+          )}
+          <h1 className='ml-3'>Hello, {user ? user.name : "Sign in"}</h1>
+        </button>
 
         {/* Digital content */}
         <h1 className='sidebar_header'>Digital Content & Devices</h1>
@@ -111,7 +122,9 @@ function Sidebar() {
               </span>
             </Link>
           </li>
-          <li className='sidebar_list_item'>Sign In</li>
+          <li className='sidebar_list_item'>
+            <button onClick={!user ? () => loginWithRedirect() : () => logout()}>{user ? "Sign out" : "Sign in"}</button>
+          </li>
         </ul>
       </div>
 
