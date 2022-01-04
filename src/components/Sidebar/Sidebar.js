@@ -91,8 +91,13 @@ function Sidebar() {
             <LanguageIcon className='mr-2 text-gray-400' style={{ fontSize: "1.05rem" }} />
             English
           </li>
-          <li className='sidebar_list_item'>
-            <ImageAspectRatioIcon className='mr-1' style={{ fontSize: "1.2rem" }} /> United States
+          <li className='sidebar_list_item flex items-center'>
+            <img
+              className='w-5 h-3.5 mr-2'
+              src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png'
+              alt='Flag'
+            />
+            United States
           </li>
           <li className='sidebar_list_item'>Customer Service</li>
           <li className='hover:bg-gray-200 flex items-center'>

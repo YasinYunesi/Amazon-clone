@@ -60,7 +60,7 @@ function Products() {
 
                 <h1 className='mt-5 mb-3 font-bold'>${price}</h1>
 
-                <button className='mt-auto py-1 rounded bg-gradient-to-b from-amber-100 to-amber-400 border border-amber-300 hover:opacity-80'>
+                <button className='mt-auto py-1 rounded bg-gradient-to-b transition-all duration-300 from-amber-100 to-amber-400 border border-amber-300 hover:opacity-80'>
                   Add to Basket
                 </button>
               </div>

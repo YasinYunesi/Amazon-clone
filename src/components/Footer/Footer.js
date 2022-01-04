@@ -6,7 +6,7 @@ function Footer() {
     <div className='mt-5 bg-amazon_blue text-white'>
       {/* Back to top btn */}
       <button
-        className='bg-amazon_blue-light w-full py-3 hover:brightness-125 hover:opacity-80'
+        className='bg-amazon_blue-light transition-all duration-300 w-full py-3 hover:brightness-125 hover:opacity-80'
         onClick={() => {
           window.scrollTo(0, 0);
         }}

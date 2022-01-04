@@ -148,7 +148,7 @@ function FooterBottom() {
         <li>Conditions of Use</li>
         <li>Privacy Notice</li>
         <li>Interest-Based Ads</li>
-        <li className='flex items-center'>
+        <li className='flex items-center' title='https://findyasinyunesi.vercel.app/'>
           <CopyrightIcon style={{ fontSize: "1.2rem" }} />
           <a href='https://findyasinyunesi.vercel.app/' target='_blank' rel='noreferrer'>
             2021 Yasin Yunesi

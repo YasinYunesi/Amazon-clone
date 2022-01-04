@@ -10,7 +10,7 @@ function NavbarBottom() {
   // JSX /////////////////////////
   return (
     <>
-      <ul className='flex items-center py-2 bg-amazon_blue text-white text-sm'>
+      <ul className='flex items-center py-1 pl-2 bg-amazon_blue text-white text-sm'>
         <li className='navbar_list_item'>
           <button className='font-semibold flex items-center' onClick={() => dispatch(activate())}>
             <MenuIcon className='mr-1' />

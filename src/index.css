@@ -10,7 +10,10 @@
 /* costume classes for tailwind start */
 @layer components {
   .navbar_list_item {
-    @apply mr-2 font-semibold cursor-pointer border border-transparent hover:border-white px-1 md:px-2;
+    @apply mr-2 font-semibold transition-all duration-300 cursor-pointer border border-transparent rounded-md hover:border-white py-1 px-1 md:px-2;
+  }
+  .dropdown_item {
+    @apply flex items-center p-1 pr-5 hover:bg-amazon_yellow hover:text-white whitespace-nowrap transition-all duration-200;
   }
   .sidebar_header {
     @apply font-semibold text-lg pl-10 pt-3 mb-1;
@@ -19,7 +22,7 @@
     @apply list-none text-sm border-b border-gray-300;
   }
   .sidebar_list_item {
-    @apply pr-5 pl-10 py-4 cursor-pointer hover:bg-gray-200;
+    @apply pr-5 pl-10 py-4 cursor-pointer transition-all hover:bg-gray-200;
   }
   .flex_between {
     @apply flex items-center justify-between;
