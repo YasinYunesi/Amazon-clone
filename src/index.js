@@ -6,6 +6,7 @@ import App from "./App";
 import store from "./app/store";
 import "./index.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;

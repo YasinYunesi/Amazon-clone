@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
+import { addToBasket, removeFromBasket } from "../../features/basket";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
 function BasketCard({ title, price, category, description, image, rating, i }) {
+  // LOGIC ////////////////////////
+  const product = { title, price, category, description, image, rating, i };
+
+  const dispatch = useDispatch();
+
+  // JSX ////////////////////////
   return (
     <div className='mb-16 flex px-2 md:px-4 lg:items-center'>
       {/* Product image */}
@@ -30,9 +38,13 @@ function BasketCard({ title, price, category, description, image, rating, i }) {
         </div>
 
         {/* Buttons */}
-        <div>
-          <button className='basket_btn'>Add to Basket</button>
-          <button className='basket_btn'>Remove from Basket</button>
+        <div className='w-full md:w-max'>
+          <button className='basket_btn' onClick={() => dispatch(addToBasket(product))}>
+            Add to Basket
+          </button>
+          <button className='basket_btn' onClick={() => dispatch(removeFromBasket(product))}>
+            Remove from Basket
+          </button>
         </div>
       </div>
     </div>

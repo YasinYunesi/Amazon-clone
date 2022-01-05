@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../features/basket";
+import { toast } from "react-toastify";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
 function Product({ id, title, price, category, description, image, rating, i }) {
@@ -8,9 +9,21 @@ function Product({ id, title, price, category, description, image, rating, i }) 
 
   // adding item to basket
   function addItemToBasket() {
+    // adding item to redux store
     const product = { id, title, price, category, description, image, rating };
-
     dispatch(addToBasket(product));
+
+    // notification
+    toast.success("Product added to your Cart", {
+      theme: "dark",
+      position: "top-right",
+      autoClose: 3500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   }
 
   // JSX /////////////////////////////////////

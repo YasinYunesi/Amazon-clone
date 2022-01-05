@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { disable } from "../features/sidebar";
+import { ToastContainer } from "react-toastify";
 import Banner from "../components/Banner/Banner";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -14,6 +15,9 @@ function HomeScreen() {
   // JSX /////////////////////////////////////
   return (
     <>
+      {/* Notify */}
+      <ToastContainer />
+
       <div className={`relative ${sidebarAnimation && "h-screen overflow-y-hidden"}`}>
         {/* the black bg for active sidebar */}
         <div
