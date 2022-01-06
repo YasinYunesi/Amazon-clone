@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { activate } from "../../features/sidebar";
+import { Activate } from "../../features/sidebar";
 import Sidebar from "../Sidebar/Sidebar";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -12,7 +12,7 @@ function NavbarBottom() {
     <>
       <ul className='flex items-center py-1 pl-2 bg-amazon_blue text-white text-sm'>
         <li className='navbar_list_item'>
-          <button className='font-semibold flex items-center' onClick={() => dispatch(activate())}>
+          <button className='font-semibold flex items-center' onClick={() => dispatch(Activate())}>
             <MenuIcon className='mr-1' />
             All
           </button>

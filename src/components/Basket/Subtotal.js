@@ -23,7 +23,7 @@ function Subtotal() {
             ? "from-amber-200 to-amber-500 border border-amber-300 hover:opacity-80"
             : "from-slate-300 to-gray-500 border border-gray-300"
         }`}
-        disabled={isAuthenticated}
+        disabled={!isAuthenticated}
       >
         {isAuthenticated ? "Proceed to checkout" : "Sign in to checkout"}
       </button>
