@@ -1,3 +1,5 @@
+// React
+import React from "react";
 // React router
 import { Link } from "react-router-dom";
 // MUI
@@ -91,4 +93,4 @@ function FooterMain() {
   );
 }
 
-export default FooterMain;
+export default React.memo(FooterMain);

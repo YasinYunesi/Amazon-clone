@@ -1,3 +1,5 @@
+// React
+import React from "react";
 // React router
 import { Link } from "react-router-dom";
 // Components
@@ -28,4 +30,4 @@ function SuccessScreen() {
   );
 }
 
-export default SuccessScreen;
+export default React.memo(SuccessScreen);

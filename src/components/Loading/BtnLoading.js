@@ -1,3 +1,6 @@
+// React
+import React from "react";
+
 function BtnLoading() {
   return (
     <div>
@@ -8,4 +11,4 @@ function BtnLoading() {
   );
 }
 
-export default BtnLoading;
+export default React.memo(BtnLoading);

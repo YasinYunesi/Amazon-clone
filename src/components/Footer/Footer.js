@@ -1,3 +1,5 @@
+// React
+import React from "react";
 // Components
 import FooterBottom from "./FooterBottom";
 import FooterMain from "./FooterMain";
@@ -24,4 +26,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default React.memo(Footer);

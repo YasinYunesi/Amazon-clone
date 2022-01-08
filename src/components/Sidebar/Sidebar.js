@@ -69,25 +69,17 @@ function Sidebar() {
               {/* Shop by department */}
               <h1 className='sidebar_header'>Shop By Department</h1>
               <ul className='sidebar_list'>
-                <li>
-                  <Link to='/category/electronics' className='flex_between sidebar_list_item'>
-                    Electronics <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
-                  </Link>
+                <li className='flex_between sidebar_list_item'>
+                  Electronics <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
                 </li>
-                <li>
-                  <Link to='/category/jewelery' className='flex_between sidebar_list_item'>
-                    Jewelery <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
-                  </Link>
+                <li className='flex_between sidebar_list_item'>
+                  Jewelery <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
                 </li>
-                <li>
-                  <Link to='/category/mens-clothing' className='flex_between sidebar_list_item'>
-                    Men's Clothing <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
-                  </Link>
+                <li className='flex_between sidebar_list_item'>
+                  Men's Clothing <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
                 </li>
-                <li>
-                  <Link to='/category/womens-clothing' className='flex_between sidebar_list_item'>
-                    Women's Clothing <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
-                  </Link>
+                <li className='flex_between sidebar_list_item'>
+                  Women's Clothing <ArrowForwardIosIcon className='text-gray-400' style={{ fontSize: "1rem" }} />
                 </li>
               </ul>
 

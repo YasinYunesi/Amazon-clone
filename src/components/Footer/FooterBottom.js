@@ -1,3 +1,5 @@
+// React
+import React from "react";
 // MUI
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
@@ -159,4 +161,4 @@ function FooterBottom() {
   );
 }
 
-export default FooterBottom;
+export default React.memo(FooterBottom);

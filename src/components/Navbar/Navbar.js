@@ -1,3 +1,5 @@
+// React
+import React from "react";
 // Components
 import NavbarTop from "./NavbarTop";
 import NavbarBottom from "./NavbarBottom";
@@ -11,4 +13,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default React.memo(Navbar);

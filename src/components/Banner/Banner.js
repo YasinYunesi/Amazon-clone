@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Carousel library
 import { Carousel } from "react-responsive-carousel";
 
@@ -63,4 +63,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default React.memo(Banner);
