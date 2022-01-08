@@ -1,11 +1,17 @@
-import { useAuth0 } from "@auth0/auth0-react";
+// React
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// React router
 import { useHistory } from "react-router-dom";
+// Redux
+import { useDispatch, useSelector } from "react-redux";
 import { totalPrice, selectItems, clearBasket } from "../../features/basket";
 import { addToOrders } from "../../features/orders";
-import BtnLoading from "../Loading/BtnLoading";
+// Auth0
+import { useAuth0 } from "@auth0/auth0-react";
+// Id generator library
 import uniqid from "uniqid";
+// Components
+import BtnLoading from "../Loading/BtnLoading";
 
 function Subtotal() {
   // LOGIC /////////////////////////

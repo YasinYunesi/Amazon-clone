@@ -1,5 +1,8 @@
+// React router
 import { Link } from "react-router-dom";
+// Components
 import Navbar from "../components/Navbar/Navbar";
+// MUI
 import DoneIcon from "@mui/icons-material/Done";
 
 function SuccessScreen() {

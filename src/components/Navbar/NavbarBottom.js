@@ -1,6 +1,8 @@
+// Redux
 import { useDispatch } from "react-redux";
 import { Activate } from "../../features/sidebar";
 import Sidebar from "../Sidebar/Sidebar";
+// MUI
 import MenuIcon from "@mui/icons-material/Menu";
 
 function NavbarBottom() {

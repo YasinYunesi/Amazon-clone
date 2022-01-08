@@ -1,4 +1,6 @@
+// React
 import { useEffect, useState } from "react";
+// Carousel library
 import { Carousel } from "react-responsive-carousel";
 
 function Banner() {

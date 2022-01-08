@@ -1,9 +1,14 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom";
+// Redux
 import { Provider } from "react-redux";
-import { Auth0Provider } from "@auth0/auth0-react";
-import App from "./App";
 import store from "./app/store";
+// Auth0
+import { Auth0Provider } from "@auth0/auth0-react";
+// Components
+import App from "./App";
+// Styles
 import "./index.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "react-toastify/dist/ReactToastify.css";

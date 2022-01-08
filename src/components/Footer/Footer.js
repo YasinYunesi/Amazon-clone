@@ -1,3 +1,4 @@
+// Components
 import FooterBottom from "./FooterBottom";
 import FooterMain from "./FooterMain";
 

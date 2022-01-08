@@ -1,6 +1,11 @@
-import { useSelector } from "react-redux";
+// React router
 import { Link } from "react-router-dom";
+// Redux
+import { useSelector } from "react-redux";
+import { selectItems } from "../../features/basket";
+// Auth0
 import { useAuth0 } from "@auth0/auth0-react";
+// MUI
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,7 +14,6 @@ import RouterIcon from "@mui/icons-material/Router";
 import WomanIcon from "@mui/icons-material/Woman";
 import ManIcon from "@mui/icons-material/Man";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { selectItems } from "../../features/basket";
 
 function NavbarTop() {
   // LOGIC //////////////////////////

@@ -1,6 +1,7 @@
+// React router
 import { Link } from "react-router-dom";
+// MUI
 import LanguageIcon from "@mui/icons-material/Language";
-import ImageAspectRatioIcon from "@mui/icons-material/ImageAspectRatio";
 
 function FooterMain() {
   return (

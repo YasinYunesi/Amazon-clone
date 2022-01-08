@@ -1,12 +1,17 @@
+// React
+import { useEffect } from "react";
+// React router
+import { Link } from "react-router-dom";
+// Redux
 import { useDispatch, useSelector } from "react-redux";
+import { clearOrders, selectItems } from "../features/orders";
+import { Deactivate } from "../features/sidebar";
+// Components
 import Navbar from "./../components/Navbar/Navbar";
 import Footer from "./../components/Footer/Footer";
-import { clearOrders, selectItems } from "../features/orders";
 import OrderItem from "../components/Orders/OrderItem";
+// UI
 import emptyOrder from "../assets/images/empty_order.svg";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { Deactivate } from "../features/sidebar";
 
 function OrdersScreen() {
   // LOGIC //////////////////////////////

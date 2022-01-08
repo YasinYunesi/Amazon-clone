@@ -1,6 +1,9 @@
+// Redux
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../features/basket";
+// Toastify library
 import { toast } from "react-toastify";
+// MUI
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
 function Product({ id, title, price, category, description, image, rating, i }) {

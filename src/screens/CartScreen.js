@@ -1,13 +1,18 @@
+// React
+import { useEffect } from "react";
+// React router
+import { Link } from "react-router-dom";
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import { selectItems, clearBasket } from "../features/basket";
-import { Link } from "react-router-dom";
+import { Deactivate } from "../features/sidebar";
+// Components
 import Navbar from "./../components/Navbar/Navbar";
 import Footer from "./../components/Footer/Footer";
 import BasketCard from "../components/Basket/BasketCard";
 import Subtotal from "../components/Basket/Subtotal";
+// UI
 import emptyCart from "../assets/images/empty_cart.svg";
-import { useEffect } from "react";
-import { Deactivate } from "../features/sidebar";
 
 function CartScreen() {
   // LOGIC /////////////////////////

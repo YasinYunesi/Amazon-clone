@@ -1,5 +1,7 @@
+// Redux
 import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../../features/basket";
+// MUI
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
 function BasketCard({ title, price, category, description, image, rating, i }) {

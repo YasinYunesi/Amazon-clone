@@ -1,12 +1,16 @@
+// React
+import { useEffect } from "react";
+// Redux
 import { useDispatch, useSelector } from "react-redux";
+import { Deactivate } from "../features/sidebar";
+// Toastify library
 import { ToastContainer } from "react-toastify";
+// Components
 import Banner from "../components/Banner/Banner";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Products from "../components/Products/Products";
 import Footer from "./../components/Footer/Footer";
-import { useEffect } from "react";
-import { Deactivate } from "../features/sidebar";
 
 function HomeScreen() {
   // LOGIC /////////////////////////////////////

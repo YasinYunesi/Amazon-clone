@@ -1,4 +1,6 @@
+// React
 import { useEffect, useState } from "react";
+// Components
 import Loading from "./../Loading/Loading";
 import Product from "./Product";
 

@@ -1,13 +1,18 @@
-import { useSelector, useDispatch } from "react-redux";
+// React router
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+// Redux
+import { useSelector, useDispatch } from "react-redux";
 import { Deactivate } from "../../features/sidebar";
+import { selectItems } from "../../features/basket";
+// Auth0
+import { useAuth0 } from "@auth0/auth0-react";
+// MUI
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LanguageIcon from "@mui/icons-material/Language";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { selectItems } from "../../features/basket";
+// Offcanvas library
 import { OffCanvas, OffCanvasMenu } from "react-offcanvas";
 
 function Sidebar() {

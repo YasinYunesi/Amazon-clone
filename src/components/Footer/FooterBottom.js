@@ -1,3 +1,4 @@
+// MUI
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
 function FooterBottom() {

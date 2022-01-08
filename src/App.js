@@ -1,5 +1,8 @@
+// React router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Redux
 import { useSelector } from "react-redux";
+// Components
 import HomeScreen from "./screens/HomeScreen";
 import CartScreen from "./screens/CartScreen";
 import OrdersScreen from "./screens/OrdersScreen";
