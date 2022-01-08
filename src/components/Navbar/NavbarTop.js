@@ -11,9 +11,9 @@ import ManIcon from "@mui/icons-material/Man";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { selectItems } from "../../features/basket";
 
-function Navbar() {
+function NavbarTop() {
   // LOGIC //////////////////////////
-  const { loginWithRedirect, logout, user } = useAuth0();
+  const { loginWithPopup, logout, user } = useAuth0();
 
   // Accessing redux
   const basketItmes = useSelector(selectItems);
@@ -91,11 +91,11 @@ function Navbar() {
           />
         </div>
         {/* Sign in */}
-        <button className='flex flex-col text-sm leading-4 mr-3 p-2' onClick={!user ? () => loginWithRedirect() : () => logout()}>
+        <button className='flex flex-col text-sm leading-4 mr-3 p-2' onClick={!user ? () => loginWithPopup() : () => logout()}>
           Hello, {user ? user.name : "User"} <span className='font-bold'>Sign {user ? "out" : "in"}</span>
         </button>
         {/* Orders */}
-        <Link to='/' className='flex flex-col text-sm leading-4 mr-3 p-2'>
+        <Link to='/orders' className='flex flex-col text-sm leading-4 mr-3 p-2'>
           Returns <span className='font-bold'>& Orders</span>
         </Link>
         {/* Shopping cart */}
@@ -113,4 +113,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarTop;

@@ -1,16 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectItems, cleareBasket } from "../features/basket";
+import { selectItems, clearBasket } from "../features/basket";
 import { Link } from "react-router-dom";
 import Navbar from "./../components/Navbar/Navbar";
 import Footer from "./../components/Footer/Footer";
 import BasketCard from "../components/Basket/BasketCard";
 import Subtotal from "../components/Basket/Subtotal";
 import emptyCart from "../assets/images/empty_cart.svg";
+import { useEffect } from "react";
+import { Deactivate } from "../features/sidebar";
 
 function CartScreen() {
   // LOGIC /////////////////////////
+  // redux
   const basket = useSelector(selectItems);
   const dispatch = useDispatch();
+  // resetting the state of sidebar
+  useEffect(() => {
+    dispatch(Deactivate());
+  }, [dispatch]);
 
   // JSX /////////////////////////
   return (
@@ -63,10 +70,7 @@ function CartScreen() {
 
             {/* Clear basket btn */}
             <div className='text-center py-10'>
-              <button
-                className='bg-red-500 text-white py-2 px-28 rounded transition-all duration-300 hover:rounded-none'
-                onClick={() => dispatch(cleareBasket())}
-              >
+              <button className='clear_btn' onClick={() => dispatch(clearBasket())}>
                 Clear Basket !
               </button>
             </div>

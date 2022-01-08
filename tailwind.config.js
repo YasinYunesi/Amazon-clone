@@ -17,17 +17,13 @@ module.exports = {
         20: "20px",
       },
       keyframes: {
-        slide_in: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0)" },
-        },
-        slide_out: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
-        },
         fade_in: {
           "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "100%": { opacity: "0.5" },
+        },
+        fade_out: {
+          "0%": { opacity: "0.5" },
+          "100%": { opacity: "0" },
         },
         rotateA: {
           "0%,25%": { transform: "rotate(0)" },
@@ -39,13 +35,26 @@ module.exports = {
           "50%,75%": { transform: "rotate(270deg)" },
           "100%": { transform: "rotate(450deg)" },
         },
+        sk_bouncedelay: {
+          "0%,80%,100%": { transform: "scale(0)" },
+          "40%": { transform: "scale(1.0)" },
+        },
+        rotate: {
+          "0%": { transform: "rotate(0)" },
+          "25%": { transform: "rotate(5deg)" },
+          "50%": { transform: "rotate(0)" },
+          "75%": { transform: "rotate(-5deg)" },
+          "100%": { transform: "rotate(0)" },
+        },
       },
       animation: {
-        slide_in: "slide_in 0.3s ease-in forwards",
-        slide_out: "slide_out 0.3s ease-in forwards",
-        fade_in: "fade_in 0.2s linear forwards",
+        fade_in: "fade_in 0.3s linear forwards",
         rotateA: "rotateA 2s linear infinite 0.5s",
         rotateB: "rotateB 2s linear infinite",
+        sk_bouncedelay: "sk_bouncedelay 1.3s infinite ease-in-out both",
+        sk_bouncedelay_1: "sk_bouncedelay 1.3s infinite -0.32s ease-in-out both",
+        sk_bouncedelay_2: "sk_bouncedelay 1.3s infinite -0.16s ease-in-out both",
+        rotate: "rotate 2s infinite linear",
       },
     },
   },

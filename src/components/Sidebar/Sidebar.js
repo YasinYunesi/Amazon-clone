@@ -18,16 +18,16 @@ function Sidebar() {
   const dispatch = useDispatch();
   const basketItmes = useSelector(selectItems);
 
-  const { loginWithRedirect, logout, user } = useAuth0();
+  const { loginWithPopup, logout, user } = useAuth0();
 
   // JSX //////////////////////////////
   return (
     <>
       <div
-        className={`bg-black opacity-50 w-screen h-screen z-40 fixed top-0 left-0 ${sideIsOpen ? "block" : "hidden"}`}
+        className={`bg-black w-screen h-screen z-40 fixed top-0 left-0 ${sideIsOpen ? "block animate-fade_in" : "hidden"}`}
         onClick={() => dispatch(Deactivate())}
       />
-      <OffCanvas transitionDuration={500} isMenuOpened={sideIsOpen}>
+      <OffCanvas transitionDuration={600} isMenuOpened={sideIsOpen}>
         <OffCanvasMenu className='h-full z-40'>
           <div className='w-72 sm:w-80 md:w-96 h-full flex justify-between'>
             {/* the main list (everything except close btn) */}
@@ -37,7 +37,7 @@ function Sidebar() {
                 className={`w-full flex items-center text-xl font-bold text-white bg-amazon_blue py-2 pl-10 ${
                   user ? "cursor-default" : "cursor-pointer"
                 }`}
-                onClick={!user ? () => loginWithRedirect() : undefined}
+                onClick={!user ? () => loginWithPopup() : undefined}
               >
                 {user ? (
                   <img className='rounded-full w-2/12' src={user.picture} alt='user' />
@@ -117,7 +117,9 @@ function Sidebar() {
                   />
                   United States
                 </li>
-                <li className='sidebar_list_item'>Customer Service</li>
+                <li className='sidebar_list_item'>
+                  <Link to='orders'>Return & Orders</Link>
+                </li>
                 <li className='hover:bg-gray-200 flex items-center'>
                   <Link to='/cart' className='py-4 pl-10 pr-5 w-full flex_between'>
                     <div>
@@ -130,7 +132,7 @@ function Sidebar() {
                   </Link>
                 </li>
                 <li className='sidebar_list_item'>
-                  <button onClick={!user ? () => loginWithRedirect() : () => logout()}>{user ? "Sign out" : "Sign in"}</button>
+                  <button onClick={!user ? () => loginWithPopup() : () => logout()}>{user ? "Sign out" : "Sign in"}</button>
                 </li>
               </ul>
             </div>

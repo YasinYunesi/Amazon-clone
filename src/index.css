@@ -42,6 +42,12 @@
   .basket_btn {
     @apply py-1.5 text-xs lg:text-sm rounded bg-gradient-to-b transition-all duration-300 from-amber-100 to-amber-400 border border-amber-300 hover:opacity-80 w-full my-3;
   }
+  .btn_loading {
+    @apply w-4 h-4 bg-slate-100 rounded-full inline-block;
+  }
+  .clear_btn {
+    @apply bg-red-500 text-white py-2 px-28 rounded-sm transition-all duration-300 hover:rounded-md;
+  }
 }
 /* costume classes for tailwind end */
 
