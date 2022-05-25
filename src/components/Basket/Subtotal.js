@@ -1,7 +1,7 @@
 // React
 import { useState } from "react";
 // React router
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { totalPrice, selectItems, clearBasket } from "../../features/basket";
@@ -16,8 +16,8 @@ import BtnLoading from "../Loading/BtnLoading";
 function Subtotal() {
   // LOGIC /////////////////////////
   const [loader, setLoader] = useState(false);
-  // Router history
-  const history = useHistory();
+  // Router navigate
+  const navigate = useNavigate();
   // Auth0
   const { isAuthenticated } = useAuth0();
   // Redux
@@ -37,7 +37,7 @@ function Subtotal() {
       // Dispatching basketItems, Random ID, Date
       dispatch(addToOrders(fullBasket));
       // Changing the route to "/success"
-      history.push("/success");
+      navigate("/success");
       // Clearing basket after checkout
       dispatch(clearBasket());
     }, 2500);
@@ -45,11 +45,11 @@ function Subtotal() {
 
   // JSX /////////////////////////
   return (
-    <div className='px-6 md:px-3 xl:px-6 py-3 col-span-6  md:col-span-1 mt-10 md:mt-0 bg-white shadow-lg md:shadow-none'>
-      <h1 className='text-lg font-bold'>
-        Subtotal <span className='text-xs text-red-500'>({basketItems.length} Items)</span> :
+    <div className="px-6 md:px-3 xl:px-6 py-3 col-span-6  md:col-span-1 mt-10 md:mt-0 bg-white shadow-lg md:shadow-none">
+      <h1 className="text-lg font-bold">
+        Subtotal <span className="text-xs text-red-500">({basketItems.length} Items)</span> :
       </h1>
-      <h1 className='bg-red-500 text-white mt-5 py-1 text-center rounded mb-2'>${total}</h1>
+      <h1 className="bg-red-500 text-white mt-5 py-1 text-center rounded mb-2">${total}</h1>
       <button
         onClick={addToOrderList}
         className={`w-full block text-center py-1 rounded bg-gradient-to-b text-sm transition-all ${

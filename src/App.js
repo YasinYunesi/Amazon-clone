@@ -1,5 +1,5 @@
 // React router
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Redux
 import { useSelector } from "react-redux";
 // Components
@@ -14,24 +14,16 @@ function App() {
   return (
     <div className={`bg-gray-100 ${sideIsOpen ? "h-screen overflow-y-hidden" : "h-full overflow-y-visible"}`}>
       <Router>
-        <Switch>
+        <Routes>
           {/* HomeScreen */}
-          <Route path='/' exact>
-            <HomeScreen />
-          </Route>
+          <Route path="/" element={<HomeScreen />} />
           {/* Basket(cart) screen */}
-          <Route path='/cart' exact>
-            <CartScreen />
-          </Route>
+          <Route path="/cart" element={<CartScreen />} />
           {/* Seccess screen */}
-          <Route path='/success' exact>
-            <SuccessScreen />
-          </Route>
+          <Route path="/success" element={<SuccessScreen />} />
           {/* Checkout(orders) screen */}
-          <Route path='/orders' exact>
-            <OrdersScreen />
-          </Route>
-        </Switch>
+          <Route path="/orders" element={<OrdersScreen />} />
+        </Routes>
       </Router>
     </div>
   );

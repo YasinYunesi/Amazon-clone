@@ -1,6 +1,6 @@
 // React
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 // Redux
 import { Provider } from "react-redux";
 import store from "./app/store";
@@ -16,13 +16,14 @@ import "react-toastify/dist/ReactToastify.css";
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
       <Provider store={store}>
         <App />
       </Provider>
     </Auth0Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
